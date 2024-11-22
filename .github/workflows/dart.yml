@@ -45,8 +45,8 @@ jobs:
       - name: Compile Dart to JavaScript
         run: |
           mkdir -p build &&
-          dart compile js -o build/malison.js lib/malison.dart &&
-          dart compile js -o build/malison_web.js lib/malison_web.dart
+          dart compile js -m -o build/malison.js lib/malison.dart &&
+          dart compile js -m -o build/malison_web.js lib/malison_web.dart
 
       # Upload the compiled JS files as artifacts
       - name: Upload artifacts
